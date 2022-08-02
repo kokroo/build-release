@@ -70,7 +70,7 @@ jobs:
         cp *.sh x-wrt/
         cp release.tag x-wrt/
         cd x-wrt
-        echo -e "$(nproc) thread build."
+        echo -e "$(nproc) core build."
         TARGET=ramips-mt7621 sh build.sh $(nproc)
 
     - name : Upload make.log if failure
