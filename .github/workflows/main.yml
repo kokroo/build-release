@@ -72,7 +72,7 @@ jobs:
         cp config.ramips-mt7621 x-wrt/
         cp config.ramips-mt7621-ext4fs x-wrt/
         cd x-wrt
-        echo -e "$(nproc) core build."
+        echo -e "$(nproc) cores build."
         TARGET=ramips-mt7621 sh build.sh $(nproc)
 
     - name : Upload make.log if failure
