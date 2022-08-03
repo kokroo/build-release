@@ -42,6 +42,8 @@
       run: |
         cp *.sh x-wrt/
         cp release.tag x-wrt/
+        cp config.ramips-mt7621 x-wrt/
+        cp config.ramips-mt7621-ext4fs x-wrt/
         cd x-wrt
         echo -e "$(nproc) thread build."
         BTARGET="_TARGET_" sh build.sh $(nproc)
