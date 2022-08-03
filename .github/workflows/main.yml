@@ -69,6 +69,8 @@ jobs:
       run: |
         cp *.sh x-wrt/
         cp release.tag x-wrt/
+        cp config.ramips-mt7621 x-wrt/
+        cp config.ramips-mt7621-ext4fs x-wrt/
         cd x-wrt
         echo -e "$(nproc) core build."
         TARGET=ramips-mt7621 sh build.sh $(nproc)

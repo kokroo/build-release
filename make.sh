@@ -33,7 +33,7 @@ for i in $IDXS; do
 	for cfg in $CFGS; do
 		test -f .build_x/$cfg && continue
 		set -x
-		cp feeds/x/rom/lede/$cfg .config
+		cp $cfg .config
 		sed -i "s/CONFIG_VERSION_NUMBER=\".*\"/CONFIG_VERSION_NUMBER=\"$CONFIG_VERSION_NUMBER\"/" ./.config
 		[ "x$i" != "x0" ] && \
 		sed -i "s/CONFIG_VERSION_DIST=\".*\"/CONFIG_VERSION_DIST=\"$CONFIG_VERSION_DIST\"/" ./.config
